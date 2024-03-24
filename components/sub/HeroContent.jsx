@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -28,20 +29,54 @@ const HeroContent = () => {
           </h1>
         </motion.div>
 
+
+
+{/* animation section */}
         <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
-        >
-          <span>
+  variants={slideInFromLeft(0.5)}
+  className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+>
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+  >
+    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+      <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+        Hello, I&apos;m{" "}
+      </span>
+      <br></br>
+      <TypeAnimation className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+        sequence={[
+          "Shaun",
+          1000,
+          "Web Developer",
+          1000,
+          "Mobile Developer",
+          1000,
+          "UI/UX Designer",
+          1000,
+        ]}
+        wrapper="span"
+        speed={50}
+        repeat={Infinity}
+      />
+    </h1>
+  </motion.div>
+</motion.div>
+
+
+  {/* <span>
             Upcoming 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               Fullstack{" "}
             </span>
             Software Developer
-          </span>
-        </motion.div>
-
+          </span> */}
+          
+{/* line below intro */}
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
