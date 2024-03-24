@@ -94,20 +94,21 @@ export default function Component() {
       </div>
       {/* Skills */}
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center">
-          <div className="space-y-4 py-4">
-            <h2 className="text-lg md:text-xl font-bold tracking-tighter sm:text-2xl text-white text-center py-2">Skills</h2>
-            <div className="grid grid-cols-5 gap-2 items-center justify-center">
-              {/* Map over skills data */}
-              {Skill_data.map((skill, index) => (
-                <span key={index} className="inline-flex h-3 md:h-4 items-center rounded-full bg-gray-100 px-2 text-2xs md:text-xs">
-                  {skill.skill_name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+  <div className="flex flex-col items-center justify-center">
+    <div className="space-y-4 py-4">
+      <h2 className="text-lg md:text-xl font-bold tracking-tighter sm:text-2xl text-white text-center py-2">Skills</h2>
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-2 items-center justify-center">
+        {/* Map over skills data */}
+        {Skill_data.map((skill, index) => (
+          <span key={index} className="inline-flex h-3 md:h-4 items-center rounded-full bg-gray-100 px-2 text-xs md:text-sm">
+            {skill.skill_name}
+          </span>
+        ))}
       </div>
+    </div>
+  </div>
+</div>
+
       <div className="mx-auto max-w-2xl border-t border-gray-200" />
       <div className="flex flex-col gap-4 items-center justify-center min-[500px] md:flex-row">
         <div className="text-center text-sm md:text-base text-gray-600">
