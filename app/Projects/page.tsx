@@ -13,6 +13,7 @@ const page = () => {
               src={project.src}
               title={project.title}
               description={project.description}
+              href={project.href}
             />
           ))}
         </div>
