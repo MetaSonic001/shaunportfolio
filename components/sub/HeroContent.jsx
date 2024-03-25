@@ -34,22 +34,26 @@ const HeroContent = () => {
 {/* animation section */}
         <motion.div
   variants={slideInFromLeft(0.5)}
-  className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+  className="flex flex-col mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+
 >
+  <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+  <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+        Hello, I&apos;m{" "}
+      </span>
+      <br></br>
+  </h1>
   <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
     className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
   >
-    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-      <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-        Hello, I&apos;m{" "}
-      </span>
-      <br></br>
+    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+      
       <TypeAnimation className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
         sequence={[
-          "Shaun",
+          "Shaun Mendes",
           1000,
           "Web Developer",
           1000,
@@ -87,6 +91,7 @@ const HeroContent = () => {
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+        href="/Projects"
         >
           Learn More!
         </motion.a>

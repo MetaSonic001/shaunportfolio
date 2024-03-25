@@ -1,19 +1,8 @@
-import Image from "next/image";
-import Hero from "../components/main/Hero";
 import React from "react";
-import Skills from "../components/main/Skills";
-import Projects from "../components/main/Projects";
+import Home from "../app/Home/page"
 
-
-export default function Home() {
+export default function page() {
   return (
-    <main className="h-full w-full">
-      <div className="flex flex-col gap-20">
-        <Hero/>
-        <Skills/>
-        <Projects/>
-
-      </div>
-    </main>
+    <Home/>
   );
 }
