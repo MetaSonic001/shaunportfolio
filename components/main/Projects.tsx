@@ -1,26 +1,15 @@
 'use client'
 import React, { useState } from "react";
-import Link from "next/link"; // Import Link from Next.js
 import ProjectCard from "../sub/ProjectCard";
 import projectsData from "../../constants/data";
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
-import {
-  slideInFromLeft,
-  slideInFromRight,
-  slideInFromTop,
-} from "../../utils/motion"; // Assuming motion variants are correctly defined in this file
-
+import { slideInFromLeft } from "../../utils/motion"; // Assuming motion variants are correctly defined in this file
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3); // Number of initially visible projects
+  const [visibleProjects, setVisibleProjects] = useState(3);
 
   const handleLoadMore = () => {
-    // Increase the number of visible projects by 3 when "Load More" button is clicked
     setVisibleProjects(visibleProjects + 3);
-
-    // console.log("visibleProjects:", visibleProjects);
-    // console.log("projectsData.length:", projectsData.length);
   };
 
   return (
@@ -33,10 +22,11 @@ const Projects = () => {
             src={project.src}
             title={project.title}
             description={project.description}
+            href={project.href} // Set the href prop based on the project index
           />
         ))}
       </div>
-      {/* {visibleProjects < projectsData.length && ( // Render "Load More" button if there are more projects to display
+      {/* {visibleProjects < projectsData.length && (
         <button
           onClick={handleLoadMore}
           className="bg-purple-500 text-white px-4 py-2 mt-5 rounded-md hover:bg-purple-600 focus:outline-none"
@@ -45,14 +35,14 @@ const Projects = () => {
         </button>
       )} */}
       <div className="my-10 py-2">
-      <motion.a
+        <motion.a
           variants={slideInFromLeft(1)}
           className="py-4 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        href="/Projects"
+          href="/Projects"
         >
           Go to Projects Page
         </motion.a>
-        </div>
+      </div>
     </div>
   );
 };

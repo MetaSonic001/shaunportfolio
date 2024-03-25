@@ -7,7 +7,8 @@ import Projects from "../../components/main/Projects";
 
 const page = () => {
   return (
-    <div><main className="h-full w-full">
+    <div>
+      <main className="h-full w-full">
     <div className="flex flex-col gap-20">
       <Hero/>
       <Skills/>

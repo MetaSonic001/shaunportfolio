@@ -57,7 +57,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-row items-center justify-between w-[500px] md:mr-20">
           <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer md:px-4 md:py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-200">
+            <a href="/Resume" className="cursor-pointer md:px-4 md:py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-200">
               About me
             </a>
             <a href="#skills" className="cursor-pointer md:px-4 md:py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-200">
@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden flex flex-col absolute top-[65px] right-0 bg-[#03001417] backdrop-blur-md py-2 px-4 w-full">
-            <a href="#about-me" className="cursor-pointer text-gray-200 block py-2 hover:bg-gray-700">
+            <a href="/Resume" className="cursor-pointer text-gray-200 block py-2 hover:bg-gray-700">
               About me
             </a>
             <a href="#skills" className="cursor-pointer text-gray-200 block py-2 hover:bg-gray-700">
